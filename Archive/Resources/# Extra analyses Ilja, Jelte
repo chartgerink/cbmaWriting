@@ -1,0 +1,60 @@
+# Extra analyses Ilja, Jelte
+# Ilja: model + fundamental needs
+selIlja <- dat$Model_immediate==1 & dat$Needs1>0
+ostr_nomod_T1_Ilja <- rma(na.omit(dat$ostr_nomod_simple_main_T1[selIlja])
+    ,na.omit(dat$ostr_nomod_simple_main_svar_T1[selIlja])
+    ,method="REML",digits=4);ostr_nomod_T1_Ilja
+ostr_mod_T1_Ilja <- rma(na.omit(dat$ostr_mod_simple_main_T1[selIlja])
+                       ,na.omit(dat$ostr_mod_simple_main_svar_T1[selIlja])
+                       ,method="REML",digits=4);ostr_mod_T1_Ilja
+mod_ostr_T1_Ilja <- rma(na.omit(dat$mod_ostr_simple_main_T1[selIlja])
+                        ,na.omit(dat$mod_ostr_simple_main_svar_T1[selIlja])
+                        ,method="REML",digits=4);mod_ostr_T1_Ilja
+mod_incl_T1_Ilja <- rma(na.omit(dat$mod_incl_simple_main_T1[selIlja])
+                        ,na.omit(dat$mod_incl_simple_main_svar_T1[selIlja])
+                        ,method="REML",digits=4);mod_incl_T1_Ilja
+rma((dat$int_T1[selIlja]),(dat$int_svar_T1[selIlja]),method="REML",digits=4)
+
+selIlja <- dat$Model_delayed==1 & dat$Needs2>0
+ostr_nomod_T2_Ilja <- rma(na.omit(dat$ostr_nomod_simple_main_T2[selIlja])
+                          ,na.omit(dat$ostr_nomod_simple_main_svar_T2[selIlja])
+                          ,method="REML",digits=4);ostr_nomod_T2_Ilja
+ostr_mod_T2_Ilja <- rma(na.omit(dat$ostr_mod_simple_main_T2[selIlja])
+                        ,na.omit(dat$ostr_mod_simple_main_svar_T2[selIlja])
+                        ,method="REML",digits=4);ostr_mod_T2_Ilja
+mod_ostr_T2_Ilja <- rma(na.omit(dat$mod_ostr_simple_main_T2[selIlja])
+                        ,na.omit(dat$mod_ostr_simple_main_svar_T2[selIlja])
+                        ,method="REML",digits=4);mod_ostr_T2_Ilja
+mod_incl_T2_Ilja <- rma(na.omit(dat$mod_incl_simple_main_T2[selIlja])
+                        ,na.omit(dat$mod_incl_simple_main_svar_T2[selIlja])
+                        ,method="REML",digits=4);mod_incl_T2_Ilja
+rma((dat$int_T2[selIlja]),(dat$int_svar_T2[selIlja]),method="REML",digits=4)
+
+
+# Jelte: Homogeneous subset, homogeneous moderator
+selJelte <- dat$Unique_study_nr==21|dat$Unique_study_nr==22|dat$Unique_study_nr==23|dat$Unique_study_nr==37|dat$Unique_study_nr==60|dat$Unique_study_nr==61|dat$Unique_study_nr==73|dat$Unique_study_nr==113|dat$Unique_study_nr==130|dat$Unique_study_nr==131
+ostr_nomod_T1_Jelte <- rma(na.omit(dat$ostr_nomod_simple_main_T1[selJelte])
+                           ,na.omit(dat$ostr_nomod_simple_main_svar_T1[selJelte])
+                           ,method="REML",digits=4);ostr_nomod_T1_Jelte
+ostr_mod_T1_Jelte <- rma(na.omit(dat$ostr_mod_simple_main_T1[selJelte])
+                         ,na.omit(dat$ostr_mod_simple_main_svar_T1[selJelte])
+                         ,method="REML",digits=4);ostr_mod_T1_Jelte
+ostr_nomod_T2_Jelte <- rma(na.omit(dat$ostr_nomod_simple_main_T2[selJelte])
+                           ,na.omit(dat$ostr_nomod_simple_main_svar_T2[selJelte])
+                           ,method="REML",digits=4);ostr_nomod_T2_Jelte
+ostr_mod_T2_Jelte <- rma(na.omit(dat$ostr_mod_simple_main_T2[selJelte])
+                         ,na.omit(dat$ostr_mod_simple_main_svar_T2[selJelte])
+                         ,method="REML",digits=4);ostr_mod_T2_Jelte
+
+mod_ostr_T1_Jelte <- rma(na.omit(dat$mod_ostr_simple_main_T1[selJelte])
+                         ,na.omit(dat$mod_ostr_simple_main_svar_T1[selJelte])
+                         ,method="REML",digits=4);mod_ostr_T1_Jelte
+mod_incl_T1_Jelte <- rma(na.omit(dat$mod_incl_simple_main_T1[selJelte])
+                         ,na.omit(dat$mod_incl_simple_main_svar_T1[selJelte])
+                         ,method="REML",digits=4);mod_incl_T1_Jelte
+mod_ostr_T2_Jelte <- rma(na.omit(dat$mod_ostr_simple_main_T2[selJelte])
+                         ,na.omit(dat$mod_ostr_simple_main_svar_T2[selJelte])
+                         ,method="REML",digits=4);mod_ostr_T2_Jelte
+mod_incl_T2_Jelte <- rma(na.omit(dat$mod_incl_simple_main_T2[selJelte])
+                         ,na.omit(dat$mod_incl_simple_main_svar_T2[selJelte])
+                         ,method="REML",digits=4);mod_incl_T2_Jelte
